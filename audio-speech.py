@@ -1,12 +1,4 @@
-# Initalization of the OpenAI API
-from openai import OpenAI
-from dotenv import load_dotenv
-import os
-from pathlib import Path
-
-
-load_dotenv()
-client = OpenAI(api_key=os.environ.get("api_key"))
+from openai_client import client
 
 speech_file_path = "speech.mp3"
 response = client.audio.speech.create(
